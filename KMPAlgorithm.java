@@ -13,13 +13,12 @@ public class KMPAlgorithm {
         while (i < m) {
             if (pattern.charAt(i) == pattern.charAt(j)) {
                 lps[i] = j + 1;
-                j++;
                 i++;
+                j++;
             } else {
                 if (j != 0) {
                     j = lps[j - 1];
                 } else {
-                    lps[i] = 0;
                     i++;
                 }
             }
